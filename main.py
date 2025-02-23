@@ -41,4 +41,17 @@ for title in netflix_titles["title"]:
 word_counts = Counter(all_words)
 most_common = word_counts.most_common(10)
 
-print(most_common)
+#Turn the list of tuples into two separate lists
+words = []
+counts = []
+for word, count in most_common:
+    words.append(word)
+    counts.append(count)
+plt.figure(figsize = (12, 8))
+plt.bar(words, counts)
+plt.xticks(rotation = 45, ha="right")
+plt.title("Top 10 most common words in Netflix Titles")
+plt.xlabel("Words")
+plt.ylabel("Frequency")
+
+plt.savefig("charts/netflix_titles_count.png")
