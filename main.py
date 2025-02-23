@@ -41,18 +41,17 @@ for title in netflix_titles["title"]:
 word_counts = Counter(all_words)
 most_common = word_counts.most_common(10)
 
-#Turn the list of tuples into two separate lists
-words = []
-counts = []
-for word, count in most_common:
-    words.append(word)
-    counts.append(count)
-plt.figure(figsize = (12, 8))
-plt.bar(words, counts, zorder=2)
-plt.grid(axis='y', linestyle='-', alpha=0.7)
-plt.xticks(rotation = 45, ha="right")
-plt.title("Top 10 most common words in Netflix Titles")
-plt.xlabel("Words")
-plt.ylabel("Frequency")
+# Need to create the DataFrame
+word_count_df = pd.DataFrame(most_common, columns=["Word", "Frequency"])
+ax = word_count_df.plot.bar(x="Word",
+                            y="Frequency",
+                            rot=45,
+                            figsize=(12, 8),
+                            title="Most Common Words in Netflix Titles",
+                            zorder=2)
 
+ax.set_ylabel("Frequency")
+ax.grid(axis="y", linestyle="-", alpha=0.7)
+
+# Save PNG to charts/
 plt.savefig("charts/netflix_titles_count.png")
