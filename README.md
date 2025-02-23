@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ### Executing program
 
-Gather data here
+Download data from here\
 https://www.kaggle.com/datasets/shivamb/netflix-shows
 
 ```
@@ -27,14 +27,14 @@ python main.py
 
 ### Output
 
-This will create 5 graphs in charts/ for each of the five stocks
+This will create a graph of the ten most frequent words used in movie titles on Netflix
 
 ## Author
 
 Daniel Terreros
 
 ## Acknowledgements
-* [yfinance](https://pypi.org/project/yfinance/)
-* [matplotlib](https://matplotlib.org/stable/tutorials/pyplot.html)
-* [matplotlib_gridlines](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.grid.html)
-* [Jason Zeller's youtube video](https://www.youtube.com/watch?v=fFss4RzSkOU)
+* [Python Counter tutorial-Geeks for Geeks ](https://www.geeksforgeeks.org/python-counter-objects-elements/)
+* [Pandas Bar documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.bar.html)
+* [Shivam Bansal's netflix movie dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+* [Jason Zeller's youtube video](https://www.youtube.com/watch?v=urdd8dIV97U)
