@@ -6,7 +6,7 @@
 
 ## Description
 
-This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
+This project will be using the packages Panda and matplotlib to determine and graph the top 10 words used in netflix titles
 
 ## Getting Started
 
