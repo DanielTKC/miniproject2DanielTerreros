@@ -146,7 +146,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
-
+.csv
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -322,3 +322,4 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,macos
+/netflix_titles.csv

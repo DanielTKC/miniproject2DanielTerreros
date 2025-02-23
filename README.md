@@ -18,6 +18,9 @@ pip install -r requirements.txt
 
 ### Executing program
 
+Gather data here
+https://www.kaggle.com/datasets/shivamb/netflix-shows
+
 ```
 python main.py
 ```

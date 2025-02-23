@@ -12,3 +12,10 @@ determined by my course instructor and outlined in institutional policies. By si
 acknowledge my commitment to upholding the principles of academic integrity.
 
 """
+
+import pandas as pd
+from collections import Counter
+
+import matplotlib.pyplot as plt
+
+netflix_titles = pd.read_csv('netflix_titles.csv', index_col=0)
