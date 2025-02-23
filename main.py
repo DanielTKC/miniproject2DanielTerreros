@@ -12,10 +12,33 @@ determined by my course instructor and outlined in institutional policies. By si
 acknowledge my commitment to upholding the principles of academic integrity.
 
 """
-
+import os
 import pandas as pd
 from collections import Counter
 
 import matplotlib.pyplot as plt
 
-netflix_titles = pd.read_csv('netflix_titles.csv', index_col=0)
+# Create charts directory if it doesn't exist
+os.makedirs("charts", exist_ok=True)
+
+#Ignore common words
+ignore_words = {
+    "a", "an", "at", "in", "on", "of", "the", "with", "by", "and", "or", "but", "to", "&",
+    "my", "for", "i", "you", "-"
+}
+
+
+ #Get the titles
+netflix_titles = pd.read_csv("netflix_titles.csv", index_col=0)
+
+# Get all the words from titles
+all_words = []
+for title in netflix_titles["title"]:
+    words = str(title).lower().split()
+    all_words.extend([word for word in words if word not in ignore_words])
+
+#Count the word frequency and return the 10 most common
+word_counts = Counter(all_words)
+most_common = word_counts.most_common(10)
+
+print(most_common)
