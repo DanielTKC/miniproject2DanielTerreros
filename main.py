@@ -43,6 +43,11 @@ most_common = word_counts.most_common(10)
 
 # Need to create the DataFrame
 word_count_df = pd.DataFrame(most_common, columns=["Word", "Frequency"])
+
+# Capitalize the first letter of each word to match titling conventions
+word_count_df["Word"] = word_count_df["Word"].str.capitalize()
+
+print(word_count_df)
 ax = word_count_df.plot.bar(x="Word",
                             y="Frequency",
                             rot=45,
